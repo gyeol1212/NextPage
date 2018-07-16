@@ -1,1 +1,54 @@
-@import 'bootstrap'
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,500,900&subset=korean');
+
+
+.navbar {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 310px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(225,225,225,0);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 78px;
+    padding-bottom: 78px;
+}
+
+.sidebar:hover {
+    background-color: rgba(225,225,225,0.35);
+}
+
+.container {
+    width: 90%;
+    margin-left: 310px;
+    padding-left: 35px;
+}
+
+.navitem {
+    margin-bottom: 15px;
+}
+
+.font {
+    color: #333333;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.font:hover {
+    text-decoration: none;
+    color: #75000F;
+}
+
+.font:active {
+    color: #75000F;
+}
+
+.ku {
+    margin-bottom: 49px;
+}
