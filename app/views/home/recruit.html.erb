@@ -1,2 +1,35 @@
 <h1>Home#recruit</h1>
 <p>Find me in app/views/home/recruit.html.erb</p>
+
+<div id="toggle">
+    <div >
+        <p id="toggle-form">첫번째 질문</p>
+        <p id="toggle-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
+    </div>
+    <div>
+        <p id="toggle-form">두번째 질문</p>
+        <p id="toggle-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
+    </div>
+    <div>
+        <p id="toggle-form">세번째 질문</p>
+        <p id="toggle-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
+    </div>
+    <div>
+        <p id="toggle-form">네번째 질문</p>
+        <p id="toggle-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
+    </div>
+</div>
+
+
+<script>
+    $(document).on("ready", function() {
+        $(this).fadeOut()
+    })
+
+    $("#toggle").on("click", "#toggle-form", function() {
+		$(this).parent().children("#toggle-item").fadeToggle(400)
+	})
+    // $( "#toggle-form" ).click (function() {
+  	// 	$( "#toggle-item" ).fadeToggle(400 );
+    // });
+</script>
