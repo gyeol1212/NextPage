@@ -1,8 +1,23 @@
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,700,800,900');
 
+.faqbox {
+    margin-left: 300px;
+    margin-right: 100px;
+}
+
+.box1 {
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+    border: 3px solid
+}
+.ml-10 {
+    margin-left: 150px;
+}
 .gg {
     display: none;
+    margin-left: 50px;
 }
 .centered0 {
     position: absolute;
@@ -85,7 +100,7 @@ body {
 }
 
 .myhand2 {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 .swiper-slide {
