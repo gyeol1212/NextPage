@@ -2,18 +2,25 @@
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,700,800,900');
 
 .faqbox {
-    margin-left: 300px;
+    margin-left: 350px;
     margin-right: 100px;
 }
-
+.hide-item{
+    display: none;
+}
 .box1 {
     width: auto;
     height: auto;
     margin-right: 20px;
     border: 3px solid
 }
-.ml-10 {
-    margin-left: 150px;
+
+.mlr-10 {
+    margin-left: 350px;
+    margin-right: 100px;
+}
+.mt-10 {
+    margin-top: 200px;
 }
 .gg {
     display: none;
@@ -75,6 +82,12 @@
     letter-spacing: -7px;
 }
 
+.fontset {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
 html, body {
     position: relative;
     height: 100% !important;
@@ -134,7 +147,20 @@ background-image:url("about-2.png")
 background-color:#9C27B0;
 }
 
+.result-1{
+    background-color: #ffc305
 
+}
+.result-2{
+    background-color:rgb(93, 184, 112)
+}
+.result-3{
+    background-color:rgb(194, 73, 99)
+}
+.result-4{
+    background-color:rgb(120, 126, 201)
+
+}
 .navbar {
     overflow-x: hidden;
 }
