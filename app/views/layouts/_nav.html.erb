@@ -1,0 +1,15 @@
+<nav class='sidebar d-flex align-items-center flex-column justify-content-end'>
+    <div class='mb-auto p-2 d-flex justify-content-center'>
+        <%= link_to image_tag("NEXT.png"), home_index_path %>
+    </div>
+    <div class='p-2 d-flex justify-content-center'>
+        <ul class='list-unstyled components text-center'>
+            <li class='navitem'><%= link_to image_tag("KU_logo.png", class: "ku"), 'http://korea.ac.kr' %></li>
+            <li class='navitem'><%= link_to 'ABOUT', home_about_path, class: 'font' %></li>
+            <li class='navitem'><%= link_to 'RECRUIT', home_recruit_path, class: 'font' %></li>
+            <li class='navitem'><%= link_to 'MEMBERS', home_members_path, class: 'font' %></li>
+            <li class='navitem'><%= link_to 'POST', posts_path, class: 'font' %></li>
+            <li class='navitem'><%= link_to 'CONTACT', home_about_path, class: 'font' %></li>
+        </ul>
+    </div>
+</nav>
