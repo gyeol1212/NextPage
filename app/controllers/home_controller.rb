@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
 
   def members
+    @members = Member.all
   end
 
   def recruit

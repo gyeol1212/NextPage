@@ -14,15 +14,27 @@
                 </thead>  
 
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>신한결</td>
-                        <td>심리학과</td>
+                <% i = 0 %>
+                <% @members.each do |member|%>
+                    <tr id = "<%= member.id%>">
+                        <td><%=i%></td>
+                        <td name="aaa"><%= member.name%></td>
+                        <td><%= member.major %></td>
+                    </tr>
+                    <%i+=1%>
+                    <script>
+                    $("#toggle").on("click", "#<%=member.id%>", function() {
+        
+                        $("#result").html("<p><%=member.name%></p><p><%=member.major%></p><img src='<%=member.image%>'>")
+                    })
+                    </script>    
+                <%end%>
                     </tr>    
                 </tbody> 
             </table>
             <div>
-                <h1>신상정보 </h1>  
+                <h1>신상정보 </h1>
+                <p id="result"><p>  
             </div>
         </div>
     </div>
@@ -40,20 +52,23 @@
                 </thead>  
 
                 <tbody>
-                    <tr>
+                    <tr id="content">
                         <td>12</td>
-                        <td>신한결1</td>
+                        <td id="aaa">신한결1</td>
                         <td>심리학과11</td>
                     </tr>    
                 </tbody> 
             </table>
             <div>
-                <h1>신상정보 </h1>  
+                <h1>신상정보 </h1> 
+                <p id="result"> 
             </div>
         </div>
     </div>
 </div>
 <script>
+    
+
      $("#toggle").children("div").children("#toggle-item").toggle()
     
 
