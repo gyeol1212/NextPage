@@ -1,34 +1,33 @@
-<h2>Sign up</h2>
+<img class="d-block w-100" src="/assets/login_bg.png" alt="Second slide">
+<div class="centered1 font">
+
+<div style='margin-bottom:40px; border-bottom:2px solid grey'>
+  <p style='font-size: 27px'><strong>Sign up</strong></p>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: '이메일', style: 'width: 300px; height: 40px; margin-bottom: 7px;' %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: '비밀번호', style: 'width: 300px; height: 40px; margin-bottom: 7px;' %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: '비밀번호 확인', style: 'width: 300px; height: 40px; margin-bottom: 7px;' %>
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name%>
+    <%= f.text_field :name, placeholder: '이름', style: 'width: 300px; height: 40px; margin-bottom:50px'%>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "회원가입", class:'box', style: 'color: white; background-color: #75000F' %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
