@@ -77,7 +77,6 @@
     </div>
 </div>
 
-<img src="#" />
 <script>
     
 
@@ -87,13 +86,5 @@
      $("#toggle").on("click", "#toggle-form", function() { 
 		 $(this).parent().children("#toggle-item").fadeToggle(400)
 	 })
-
-     $("#toggle").on("click", "#content", function() {
-         $.getJSON("https://dog.ceo/api/breeds/image/random", function(data) {
-             $("img").attr("src", data["message"])
-         })
-        $("img").attr("src", "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
-     })
-
 
 </script>
