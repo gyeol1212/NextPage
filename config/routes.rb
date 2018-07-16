@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+
+  get 'comments/destroy'
+
   devise_for :users
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
+
   get 'home/index'
 
   get 'home/about'
