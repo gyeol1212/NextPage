@@ -1,5 +1,55 @@
-@import 'bootstrap';
+@import 'bootstrap' ;
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,500,900&subset=korean');
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#fff;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination-bullet-active{
+background-color:#fff;
+}
+
+.about-1{
+background-image:url("about-1.png")
+}
+.about-2{
+background-image:url("about-2.png")
+}
+.about-3{
+background-color:#9C27B0;
+}
 
 
 .navbar {
