@@ -7,6 +7,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    margin-top: 30px;
 }
 
 .centered1 {
@@ -15,6 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    margin-top: 30px;
 }
 
 .centered2 {
@@ -22,6 +24,7 @@
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 30px;
 }
 
 .btn {
@@ -32,6 +35,17 @@
     width: 322px;
     height: 84px;
     font-size: 43px !important;
+}
+
+.btn:hover {
+    background-color: #ffc305 !important;
+    opacity: 0.8;
+    text-decoration: none;
+    color: white;
+}
+
+.yeah {
+    margin-top: -100px;
 }
 
 .contentfont {
@@ -45,7 +59,8 @@
 
 html, body {
     position: relative;
-    height: 100%;
+    height: 100% !important;
+    overflow: hidden;
 }
 body {
     background: #eee;
@@ -61,8 +76,16 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.myhand {
+    margin-top: 500px;
+}
+
+.myhand2 {
+    margin-bottom: 200px;
+}
+
 .swiper-slide {
-    text-align: center;
     font-size: 18px;
     background: #fff;
     /* Center slide text vertically */
