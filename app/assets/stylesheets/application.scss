@@ -1,5 +1,47 @@
-@import 'bootstrap' ;
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,500,900&subset=korean');
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,700,800,900');
+
+.centered0 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    border: 5px solid white !important;
+    border-radius: 42px !important;
+    opacity: 0.5;
+    background-color: black !important;
+    width: 322px;
+    height: 84px;
+    font-size: 43px !important;
+}
+
+.contentfont {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700;
+    font-size: 110px;
+    color: white;
+    padding-bottom: -2px;
+    letter-spacing: -7px;
+}
 
 html, body {
     position: relative;
