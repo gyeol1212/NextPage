@@ -3,8 +3,8 @@
 <div id="toggle" class="m-5">
     <div>
         <h1 id="toggle-form">1기</h1>
-        <div id = "toggle-item">
-            <table class="table">
+        <div id = "toggle-item" class="d-flex justify-content-between">
+            <table class="table col-sm">
                 <thead>
                     <tr>
                         <th>No.</th>
@@ -32,7 +32,7 @@
                     </tr>    
                 </tbody> 
             </table>
-            <div>
+            <div class="col-sm">
                 <h1>신상정보 </h1>
                 <p id="result"><p>  
             </div>
@@ -59,8 +59,8 @@
                     </tr>  
                     <tr id="content">
                         <td>12</td>
-                        <td>신한결1213</td>
-                        <td>심리학과11123123</td>
+                        <td><%= link_to('회원가입', new_user_registration_path)  %></td>
+                        <td><%= link_to('로그인', new_user_session_path)  %></td>
                     </tr>
                     <tr id="content">
                         <td>12</td>
@@ -76,7 +76,6 @@
         </div>
     </div>
 </div>
-
 <script>
     
 
@@ -86,5 +85,4 @@
      $("#toggle").on("click", "#toggle-form", function() { 
 		 $(this).parent().children("#toggle-item").fadeToggle(400)
 	 })
-
 </script>
