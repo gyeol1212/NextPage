@@ -14,10 +14,20 @@
                 </thead>  
 
                 <tbody>
-                    <tr>
+                    <tr id="content">
                         <td>1</td>
                         <td>신한결</td>
                         <td>심리학과</td>
+                    </tr>
+                    <tr id="content">
+                        <td>1</td>
+                        <td>신한결dsfasd</td>
+                        <td>심리학과asdf</td>
+                    </tr>
+                    <tr id="content">
+                        <td>1</td>
+                        <td>신한결sadf</td>
+                        <td>심리학과sdafasdf</td>
                     </tr>    
                 </tbody> 
             </table>
@@ -40,11 +50,21 @@
                 </thead>  
 
                 <tbody>
-                    <tr>
+                    <tr id="content">
                         <td>12</td>
                         <td>신한결1</td>
                         <td>심리학과11</td>
-                    </tr>    
+                    </tr>  
+                    <tr id="content">
+                        <td>12</td>
+                        <td>신한결1213</td>
+                        <td>심리학과11123123</td>
+                    </tr>
+                    <tr id="content">
+                        <td>12</td>
+                        <td>신한결1123123</td>
+                        <td>심리학과11231231</td>
+                    </tr>  
                 </tbody> 
             </table>
             <div>
@@ -53,11 +73,23 @@
         </div>
     </div>
 </div>
+
+<img src="#" />
 <script>
+
      $("#toggle").children("div").children("#toggle-item").toggle()
     
 
      $("#toggle").on("click", "#toggle-form", function() { 
 		 $(this).parent().children("#toggle-item").fadeToggle(400)
 	 })
+
+     $("#toggle").on("click", "#content", function() {
+         $.getJSON("https://dog.ceo/api/breeds/image/random", function(data) {
+             $("img").attr("src", data["message"])
+         })
+        $("img").attr("src", "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+     })
+
+
 </script>
