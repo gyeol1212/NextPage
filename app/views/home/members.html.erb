@@ -1,2 +1,99 @@
 <h1>Home#members</h1>
 <p>Find me in app/views/home/members.html.erb</p>
+<div id="toggle" class="m-5">
+    <div>
+        <h1 id="toggle-form">1기</h1>
+        <div id = "toggle-item">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>major</th>
+                    </tr>
+                </thead>  
+
+                <tbody>
+                <% i = 0 %>
+                <% @members.each do |member|%>
+                    <tr id = "<%= member.id%>">
+                        <td><%=i%></td>
+                        <td name="aaa"><%= member.name%></td>
+                        <td><%= member.major %></td>
+                    </tr>
+                    <%i+=1%>
+                    <script>
+                    $("#toggle").on("click", "#<%=member.id%>", function() {
+        
+                        $("#result").html("<p><%=member.name%></p><p><%=member.major%></p><img src='<%=member.image%>'>")
+                    })
+                    </script>    
+                <%end%>
+                    </tr>    
+                </tbody> 
+            </table>
+            <div>
+                <h1>신상정보 </h1>
+                <p id="result"><p>  
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1 id="toggle-form">2기</h1>
+        <div id = "toggle-item">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>major</th>
+                    </tr>
+                </thead>  
+
+                <tbody>
+                    <tr id="content">
+                        <td>12</td>
+                        <td id="aaa">신한결1</td>
+                        <td>심리학과11</td>
+                    </tr>  
+                    <tr id="content">
+                        <td>12</td>
+                        <td>신한결1213</td>
+                        <td>심리학과11123123</td>
+                    </tr>
+                    <tr id="content">
+                        <td>12</td>
+                        <td>신한결1123123</td>
+                        <td>심리학과11231231</td>
+                    </tr>  
+                </tbody> 
+            </table>
+            <div>
+                <h1>신상정보 </h1> 
+                <p id="result"> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<img src="#" />
+<script>
+    
+
+     $("#toggle").children("div").children("#toggle-item").toggle()
+    
+
+     $("#toggle").on("click", "#toggle-form", function() { 
+		 $(this).parent().children("#toggle-item").fadeToggle(400)
+	 })
+
+     $("#toggle").on("click", "#content", function() {
+         $.getJSON("https://dog.ceo/api/breeds/image/random", function(data) {
+             $("img").attr("src", data["message"])
+         })
+        $("img").attr("src", "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+     })
+
+
+</script>
