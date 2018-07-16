@@ -12,6 +12,7 @@
 
 <% @post.comments.each do |comment| %>
   <%= comment.content %>
+  <%= comment.user.email%>
   <%= link_to '삭제', post_comment_path(@post.id,comment.id), method: 'delete'%> <br>
 <% end %>
 

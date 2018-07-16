@@ -1,2 +1,63 @@
 <h1>Home#members</h1>
 <p>Find me in app/views/home/members.html.erb</p>
+<div id="toggle" class="m-5">
+    <div>
+        <h1 id="toggle-form">1기</h1>
+        <div id = "toggle-item">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>major</th>
+                    </tr>
+                </thead>  
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>신한결</td>
+                        <td>심리학과</td>
+                    </tr>    
+                </tbody> 
+            </table>
+            <div>
+                <h1>신상정보 </h1>  
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1 id="toggle-form">2기</h1>
+        <div id = "toggle-item">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>major</th>
+                    </tr>
+                </thead>  
+
+                <tbody>
+                    <tr>
+                        <td>12</td>
+                        <td>신한결1</td>
+                        <td>심리학과11</td>
+                    </tr>    
+                </tbody> 
+            </table>
+            <div>
+                <h1>신상정보 </h1>  
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+     $("#toggle").children("div").children("#toggle-item").toggle()
+    
+
+     $("#toggle").on("click", "#toggle-form", function() { 
+		 $(this).parent().children("#toggle-item").fadeToggle(400)
+	 })
+</script>
