@@ -83,13 +83,27 @@
 
     $("#div1").on("click", function(){
         $("#result").html("<p style='font-size: 30px'>서류 심사에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>서류는 뭐 글자수 제한만 채워도 합격하기도, 엄청 길게써도 떨어지기도 함 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
+        $(this).css("background-color", "rgba(69, 145, 107, 0.35)")
+        $(this).parent().children("#div2").css("background-color", "rgba(0,0,0,0)")
+        $(this).parent().children("#div3").css("background-color", "rgba(0,0,0,0)")
+
     })
     $("#div2").on("click", function(){
         $("#result").html("<p style='font-size: 30px'>면접 심사에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>면접은 운영진들이랑 보는데, 압박면접 개쩜;; 준비 개빡세게 해야함 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
+        $(this).css("background-color", "rgba(69, 145, 107, 0.35)")
+        $(this).parent().children("#div1").css("background-color", "rgba(0,0,0,0)")
+        $(this).parent().children("#div3").css("background-color", "rgba(0,0,0,0)")
+   
     })
     $("#div3").on("click", function(){
         $("#result").html("<p style='font-size: 30px'>합격자 발표에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>합격 ㅊㅊ 근데 엠티 필참임 ㅠ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
+        $(this).css("background-color", "rgba(69, 145, 107, 0.35)")
+        $(this).parent().children("#div1").css("background-color", "rgba(0,0,0,0)")
+        $(this).parent().children("#div2").css("background-color", "rgba(0,0,0,0)")
+
     })
+
+    
 
     $("#toggle").on("click", "#toggle-form", function() {
 		$(this).parent().children("#toggle-item").fadeToggle(400)
