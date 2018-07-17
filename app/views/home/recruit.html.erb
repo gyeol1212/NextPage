@@ -21,36 +21,50 @@
                 <p style="color: black; font-size: 50px">웹 서비스에 대해 몰라도 열정만 있다면 함께할 수 있습니다.</p>
             </div>
         </div>
-        <div class="swiper-slide about-2">Slide 2
-            <div class="m-5">
-                <h1>선발 PROCESS</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
+        <div class="swiper-slide d-flex flex-column about-2">
+            <div id="alldiv" class=" d-flex text-center justify-content-between ml-10" style="font-size: 30px; width: 1000px">
+                <div id="div1" class="col-4 box1">
+                    <p>1차 : 서류 심사</p>
+                    <p>3월 1일 ~ 3월 14일</p>
+                </div>
+                <div id="div2" class="col-4 box1">
+                    <p>2차 : 면접 심사</p>
+                    <p>3월 15일 ~ 3월 16일</p>
+                </div>
+                <div id="div3" class="col-4 box1">
+                    <p>합격자 발표</p>
+                    <p>3월 17일</p>
+                </div>
+            </div>
+            <div class="mt-5" style="width:1000px">
+                <p style="font-size: 50px" id="result"></p>
             </div>
         </div>
-        <div class="swiper-slide about-3">Slide 3
-            <div class="m-5" id="FAQ">
-                <h1>FAQ</h1>
-                <div id="toggle">
+        <div class="swiper-slide about-3">
+            <div class=" faqbox table" id="FAQ">
+                <h1 style="font-size: 100px">FAQ</h1>
+                <p style="font-size: 50px">똑같은 것 좀 그만 물어보세요</p>
+                <div  id="toggle" style="font-size: 30px">
                     <div>
-                        <p id="toggle-form">첫번째 질문</p>
+                        <p id="toggle-form">Q1. 운장이 형은 잘생겼나요?</p>
                         <div class="gg" id="toggle-item">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
                         </div>
                     </div>
                     <div>
-                        <p id="toggle-form">두번째 질문</p>
+                        <p id="toggle-form">Q2. 두번째 질문</p>
                         <div class="gg" id="toggle-item">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
                         </div>
                     </div>
                     <div>
-                        <p id="toggle-form">세번째 질문</p>
+                        <p id="toggle-form">Q3. 세번째 질문</p>
                         <div class="gg" id="toggle-item">
                             <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
                         </div>
                     </div>
                     <div>
-                        <p id="toggle-form">네번째 질문</p>
+                        <p id="toggle-form">Q4. 네번째 질문</p>
                         <div class="gg" id="toggle-item">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>
                         </div>  
@@ -64,12 +78,21 @@
 
 
 <script>
-    $("#toggle").children("div").children("#toggle-item").toggle()
-    
+    // $("#toggle").children("div").children("#toggle-item").toggle()
+     $("#recruit").css("color", "white")
+
+    $("#div1").on("click", function(){
+        $("#result").html("<p style='font-size: 30px'>서류 심사에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>서류는 뭐 글자수 제한만 채워도 합격하기도, 엄청 길게써도 떨어지기도 함 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
+    })
+    $("#div2").on("click", function(){
+        $("#result").html("<p style='font-size: 30px'>면접 심사에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>면접은 운영진들이랑 보는데, 압박면접 개쩜;; 준비 개빡세게 해야함 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
+    })
+    $("#div3").on("click", function(){
+        $("#result").html("<p style='font-size: 30px'>합격자 발표에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>합격 ㅊㅊ 근데 엠티 필참임 ㅠ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
+    })
 
     $("#toggle").on("click", "#toggle-form", function() {
 		$(this).parent().children("#toggle-item").fadeToggle(400)
 	})
        
 </script>
-
