@@ -1,92 +1,67 @@
-
 <div id="toggle" class="mlr-10 mt-10">
-    
-
-    <div style="font-size:25px;" >
-        <h1 id="toggle-form">1기</h1>
-        <div class="text-center hide-item" id = "toggle-item">
-            <table class="table" style="float: left; width: 50%;">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Name</th>
-                        <th>major</th>
-                    </tr>
-                </thead>  
-
-                <tbody>
-                <% i = 1 %>
-                <% @members.each do |member|%>
-                    <tr id = "<%= member.id%>">
-                        <td><%=i%></td>
-                        <td name="aaa"><%= member.name%></td>
-                        <td><%= member.major %></td>
-                    </tr>
-                    <%i+=1%>
-                    <script>
-                    $("#toggle").on("click", "#<%=member.id%>", function() {
-        
-                        $("#result").html("<img src='<%=member.image%>'><p>이름 : <%=member.name%></p><p>학과 : <%=member.major%></p>")
-                    })
-                    </script>    
-                <%end%>
-                    </tr>    
-                </tbody> 
-            </table>
-            <div style="font-size: 30px; float: right; width: 50%; height: 500px; ">
-                <p id="result"> 
-            </div>
-        
+    <div class="d-flex justify-content-left">
+        <div style="margin-top:-13.5%">
+            <%= image_tag "https://picsum.photos/100/1024" %>
         </div>
-
-    </div>
-    <br>
-    <div>
-        <h1 id="toggle-form">2기</h1>
-        <div class="text-center hide-item" id = "toggle-item">
-            <table class="table" style="float: left; width: 50%;">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Name</th>
-                        <th>major</th>
-                    </tr>
-                </thead>  
-
-                <tbody>
-                <% i = 1 %>
-                <% @members.each do |member|%>
-                    <tr id = "<%= member.id%>">
-                        <td><%=i%></td>
-                        <td name="aaa"><%= member.name%></td>
-                        <td><%= member.major %></td>
-                    </tr>
-                    <%i+=1%>
-                    <script>
-                    $("#toggle").on("click", "#<%=member.id%>", function() {
-        
-                        $("#result2").html("<img src='<%=member.image%>'><p>이름 : <%=member.name%></p><p>학과 : <%=member.major%></p>")
-                    })
-                    </script>    
-                <%end%>
-                    </tr>    
-                </tbody> 
-            </table>
-            <div class=" text-center " style="font-size: 30px; float: right; width: 50%; height: 500px; ">
-                <p id="result2"> 
+        <div class="ml-5" style="margin-top:-5%;">
+            <div>
+                <h1 style =" font-size: 50px; font-weight:300">Members</h1>
             </div>
-        
-        </div>
+            <br><br>
+            <div style="font-size:25px;" class="d-flex justify-content-around">
+                <div style="width: 100px;">
+                    <h2 id="toggle-form">1기</h2>
+                </div>
+                <div class="text-center tablescroll hide-item" id = "toggle-item">
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th style="width:350px;">No.</th>
+                                <th style="width:450px;">Name</th>
+                                <th style="width:450px;">major</th>
+                            </tr>
+                        </thead>  
 
+                        <tbody>
+                        <% i = 1 %>
+                        <% @members.each do |member|%>
+                            <tr id = "<%= member.id%>">
+                                <td><%=i%></td>
+                                <td name="aaa"><%= member.name%></td>
+                                <td><%= member.major %></td>
+                            </tr>
+                            <%i+=1%>
+                            <script>
+                            $("#toggle").on("click", "#<%=member.id%>", function() {
+                
+                                $("#result").html("<br><img src='<%=member.image%>'><p>이름 : <%=member.name%></p><p>학과 : <%=member.major%></p>")
+                            })
+                            </script>    
+                        <%end%>
+                            </tr>    
+                        </tbody> 
+                    </table>
+                    
+                
+                </div>
+                <div id="toggle-item2" class="ml-5" style="font-size: 30px; float: right; width: 40%; height: 450px; ">
+                    <p id="result"> 
+                </div>
+                    
+            </div>
+            <div style="font-size:25px;" >
+                <h2 id="toggle-form">2기</h2>
+            </div>
+        </div>
     </div>
 </div>
 <script>
     
-    $("#members").css("color", "white")
+    $("#members").css("color", "rgb(124,0,26)")
     //  $("#toggle").children("div").children("#toggle-item").toggle()
     
 
      $("#toggle").on("click", "#toggle-form", function() { 
-		 $(this).parent().children("#toggle-item").fadeToggle(400)
+		 $(this).parent().parent().children("#toggle-item").fadeToggle(400)
 	 })
 </script>

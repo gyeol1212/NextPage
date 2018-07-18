@@ -6,7 +6,9 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    
     @posts = Post.order("created_at DESC").page params[:page]
+    @postall= Post.all
   end
 
   # GET /posts/1

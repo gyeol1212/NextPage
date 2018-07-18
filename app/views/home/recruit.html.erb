@@ -13,15 +13,21 @@
 
 <div class="swiper-container">
     <div class="swiper-wrapper style="transform: translate3d(0px, -436px, 0px); transition-duration: 0ms;"">
-        <div class="swiper-slide d-flex flex-column about-1">
-            <div class="contentfont myhand">
+        <div class="swiper-slide d-flex flex-column recruit-1">
+            <div style="letter-spacing: -7px"class="contentfont myhand">
                 <p>내 아이디어를 내 손으로</p>
             </div>
+            
             <div class="contentfont myhand2">
-                <p style="color: black; font-size: 50px">웹 서비스에 대해 몰라도 열정만 있다면 함께할 수 있습니다.</p>
+                <p style="color: white; font-weight: 300; font-size: 50px">웹 서비스에 대해 몰라도 열정만 있다면 함께할 수 있습니다.</p>
+            </div>
+            <div style="width:1500px; margin-top:-5%">
+                <p class="text-right"><%= image_tag "/assets/scroll_down.png",class: 'imgsize' %></p>
             </div>
         </div>
         <div class="swiper-slide d-flex flex-column about-2">
+            <p style="font-size:70px; ;">Recruit Process</p>
+            <br><br><br>
             <div id="alldiv" class=" d-flex text-center justify-content-between ml-10" style="font-size: 30px; width: 1000px">
                 <div id="div1" class="col-4 box1">
                     <p>1차 : 서류 심사</p>
@@ -39,9 +45,20 @@
             <div class="mt-5" style="width:1000px">
                 <p style="font-size: 50px" id="result"></p>
             </div>
+            <br><br>
+            <div >
+                <button id="button" class="buttonstyle buttonborder" style="color: black; font-size: 20px">지원하기</button>
+            </div>
+            <br><br>
+            <div style="width:1500px; margin-top: -10%" class="text-right">
+                <span ><%= image_tag "/assets/black_scroll_down.png",class: 'imgsize' %></span>
+            </div>
+            
+            
         </div>
+
         <div class="swiper-slide about-3">
-            <div class=" faqbox table" id="FAQ">
+            <div style="font-weight:300;"class=" faqbox table" id="FAQ">
                 <h1 style="font-size: 100px">FAQ</h1>
                 <p style="font-size: 50px">똑같은 것 좀 그만 물어보세요</p>
                 <div  id="toggle" style="font-size: 30px">
@@ -78,26 +95,29 @@
 
 
 <script>
-    // $("#toggle").children("div").children("#toggle-item").toggle()
-     $("#recruit").css("color", "white")
+     $("#recruit").css("color", "rgb(124,0,26")
+
+    $("#button").click(function(){
+        alert("지금은 지원 기간이 아닙니다")
+    })
 
     $("#div1").on("click", function(){
         $("#result").html("<p style='font-size: 30px'>서류 심사에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>서류는 뭐 글자수 제한만 채워도 합격하기도, 엄청 길게써도 떨어지기도 함 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
-        $(this).css("background-color", "rgba(69, 145, 107, 0.35)")
+        $(this).css("background-color", "rgba(220,220,220,0.8)")
         $(this).parent().children("#div2").css("background-color", "rgba(0,0,0,0)")
         $(this).parent().children("#div3").css("background-color", "rgba(0,0,0,0)")
 
     })
     $("#div2").on("click", function(){
         $("#result").html("<p style='font-size: 30px'>면접 심사에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>면접은 운영진들이랑 보는데, 압박면접 개쩜;; 준비 개빡세게 해야함 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
-        $(this).css("background-color", "rgba(69, 145, 107, 0.35)")
+        $(this).css("background-color", "rgba(220,220,220,0.8)")
         $(this).parent().children("#div1").css("background-color", "rgba(0,0,0,0)")
         $(this).parent().children("#div3").css("background-color", "rgba(0,0,0,0)")
    
     })
     $("#div3").on("click", function(){
         $("#result").html("<p style='font-size: 30px'>합격자 발표에 대한 소개글을 적읍시다</p><p style='font-size: 20px'>합격 ㅊㅊ 근데 엠티 필참임 ㅠ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores eligendi voluptatum quibusdam atque ipsa impedit quisquam aut? Totam debitis voluptatibus, odit repudiandae quidem omnis illum sit adipisci consectetur tempora.</p>")
-        $(this).css("background-color", "rgba(69, 145, 107, 0.35)")
+        $(this).css("background-color", "rgba(220,220,220,0.8)")
         $(this).parent().children("#div1").css("background-color", "rgba(0,0,0,0)")
         $(this).parent().children("#div2").css("background-color", "rgba(0,0,0,0)")
 
