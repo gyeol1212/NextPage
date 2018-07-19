@@ -2,5 +2,7 @@ class Post < ApplicationRecord
     has_many :comments
     belongs_to :user
 
-    paginates_per 5
+    paginates_per 7
+
+    
 end
