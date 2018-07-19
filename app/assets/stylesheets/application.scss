@@ -28,7 +28,7 @@
 }
 .centered0 {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -37,7 +37,7 @@
 
 .centered1 {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -46,7 +46,7 @@
 
 .centered2 {
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 30px;
@@ -65,13 +65,13 @@
 .btn:hover {
     background-color: #ffc305 !important;
     opacity: 0.8;
-    text-decoration: none;
+    text-decoration: none !important;
     color: white;
 }
 
-.yeah {
-    margin-top: -100px;
-}
+// .yeah {
+//     margin-top: -100px;
+// }
 
 .contentfont {
     font-family: 'Gothic A1', sans-serif;
@@ -80,6 +80,14 @@
     color: white;
     padding-bottom: -2px;
     letter-spacing: -7px;
+}
+
+.buttonfont {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 300;
+    font-size: 70px;
+    color: white; 
+    text-decoration: none;
 }
 
 .fontset {
@@ -91,7 +99,7 @@
 html, body {
     position: relative;
     height: 100% !important;
-    overflow: hidden;
+    // overflow: hidden;
 }
 body {
     background: #eee;
@@ -134,17 +142,30 @@ body {
     align-items: center;
 }
 .swiper-pagination-bullet-active{
-background-color:#fff;
+    background-color:#fff;
 }
 
 .about-1{
-background-image:url("about-1.png")
+    background-image:url("about-1.png");
 }
 .about-2{
-background-image:url("about-2.png")
+    background-image:url("about-2.png");
 }
 .about-3{
-background-color:#9C27B0;
+    background-color:#9C27B0;
+}
+
+.alldiv {
+    position: absolute !important;
+}
+
+.recruittitle {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 300;
+}
+
+.div1 {
+    padding-top: 5px;
 }
 
 .result-1{
