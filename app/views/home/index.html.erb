@@ -1,3 +1,5 @@
+    <%# <%= image_tag "bgbg.png", style: "width:100%; height:100%; positiion:absolute;"%>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -8,13 +10,17 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100 yeah" src="/assets/main_1.jpg" alt="First slide">
+      <%= image_tag "main_1.jpg",class: 'd-block w-100', alt: "First slide" %>
+
+      <%# <img class="d-block w-100 yeah" src="main_1.jpg" alt="First slide"> %>
       <div class="centered0">
-        <img src="/assets/mainlogo.png">
+        <%= image_tag "mainlogo.png"%>
+        <%# <img src="/assets/mainlogo.png"> %>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100 yeah" src="/assets/main_2.jpg" alt="Second slide">
+      <%= image_tag "main_2.jpg",class: 'd-block w-100', alt: "Second slide" %>
+      <%# <img class="d-block w-100 yeah" src="/assets/main_2.jpg" alt="Second slide"> %>
       <div class="centered1 contentfont">
         <p class="contentfont">우리는 세상을</p>
         <p class="contentfont">배우고 탐구합니다</p>
@@ -22,7 +28,8 @@
       <button type="button" class="btn btn-secondary centered2 contentfont"><%= link_to "Who We Are", home_about_path, style: 'color: #777777' %></button>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100 yeah" src="/assets/main_3.jpg" alt="Third slide">
+        <%= image_tag "main_3.jpg",class: 'd-block w-100', alt: "Third slide" %>
+      <%# <img class="d-block w-100 yeah" src="/assets/main_3.jpg" alt="Third slide"> %>
       <div class="centered1 contentfont">
         <p class="contentfont">구글링을</p>
         <p class="contentfont">생활화 해보세요</p>
@@ -30,7 +37,8 @@
       <button type="button" class="btn btn-secondary centered2 contentfont"><%= link_to 'Network', home_members_path, style: 'color: #777777'%></button>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100 yeah" style="max-height: 100%" src="/assets/main_4.jpg" alt="Fourth slide">
+      <%= image_tag "main_4.jpg",class: 'd-block w-100', alt: "Fourth slide" %>
+      <%# <img class="d-block w-100 yeah" style="max-height: 100%" src="/assets/main_4.jpg" alt="Fourth slide"> %>
       <div class="centered1 contentfont">
         <p class="contentfont" style="color: grey">우리는</p>
         <p class="contentfont" style="color: grey">이런 것들을 했어요</p>
@@ -38,6 +46,7 @@
       <button type="button" class="btn btn-secondary centered2 contentfont"><%= link_to 'What We Do', home_result_path, style: 'color: #777777'%></button>
     </div>
     <div class="carousel-item">
+      <%= image_tag "main_5.jpg",class: 'd-block w-100', alt: "Fifth slide" %>
       <img class="d-block w-100 yeah" src="/assets/main_5.png" alt="Fifth slide">
       <div class="centered1 contentfont">
         <p class="contentfont">지금 바로</p>
