@@ -11,24 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class='form group' style='margin-top:30px;'>
+    <%= f.label :제목, class:'show' %>
+    <%= f.text_field :title, class: 'form-control show', style:'margin-top: 10px' %>
   </div>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+  <div class='form group' style='margin-top:15px;'>
+    <%= f.label :내용, class:'show' %>
+    <%= f.text_area :content, class: 'form-control show', style:'margin-top: 10px' %>
   </div>
 
 
-  <div class="field">
-    <%= f.label :notice %>
+  <div class='form group' style='margin-top:15px;'>
     <%= f.check_box :notice %>
+    <%= f.label :공지, class:'show', style:'font-size:15px;' %>
   </div>
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit '작성', :class => 'buttonstyle', :style => 'margin-top: 30px' %>
+
 <% end %>
