@@ -113,7 +113,7 @@
 }
 
 .postindex {
-    background-image:url("bgbg.png")
+    background-image: asset-data-url("bgbg.png")
 }
 .contentfont {
     font-family: 'Gothic A1', sans-serif;
@@ -136,7 +136,7 @@ html, body {
     overflow: hidden;
 }
 body {
-    // background-image: url("bgbg.png");
+    background-image: asset-data-url("bgbg.png");
 
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -220,31 +220,36 @@ background-color:#fff;
 }
 
 .about-1{
-background-image:url("about-1.png")
+background-image: asset-data-url("about-1.png")
 }
 .about-2{
-background-image:url("about-2.png")
+background-image: asset-data-url("about-2.png")
 }
 .about-3{
 background-color:rgba(200, 219, 130, 0.5);
 }
 
 .recruit-1{
-    background-image:url("main_2.jpg")
+    background-image: asset-data-url("main_2.jpg")
 }
-.result-1{
-    background-image:url("bgbg.png");
-}
-.result-2{
-    background-image:url("bgbg.png")
-}
-.result-3{
-    background-image:url("bgbg.png")
-}
-.result-4{
-    background-image:url("bgbg.png")
+.result-bg{
+    background-image: asset-data-url("bgbg.png")
 
 }
+
+//.class { background-image: url(<%= asset_path 'image.png' %>) }
+// .result-2{
+//     background-image:url("bgbg.png")
+//     background-image: asset-data-url("bgbg.png")
+
+// }
+// .result-3{
+//     background-image:url("bgbg.png")
+// }
+// .result-4{
+//     background-image:url("bgbg.png")
+
+// }
 .navbar {
     overflow-x: hidden;
 }
