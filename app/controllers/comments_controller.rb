@@ -5,14 +5,22 @@ class CommentsController < ApplicationController
     @comment=Comment.new(comment_params)
     @comment.post_id = params[:post_id]
     @comment.user_id = current_user.id
-    @comment.save
+    if @comment.save
+      respond_to do |format|
+        format.js
+      end
+    end
 
     redirect_to :back
   end
 
   def destroy
     @comment=Comment.find(params[:id])
-    @comment.destroy
+    if @comment.destroy
+      respond_to do |format|
+        format.js
+      end
+    end
 
     redirect_to :back
   end

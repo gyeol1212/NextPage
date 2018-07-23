@@ -16,11 +16,11 @@
   <% @post.comments.each do |comment| %>
     <p class='show'><%= comment.user.name %></p>
     <p class='show'><%= comment.content %></p>
-    <%= link_to '삭제', post_comment_path(@post.id,comment.id), method: 'delete'%> <br>
+    <%= link_to '삭제', post_comment_path(@post.id,comment.id), method: 'delete', remote: true %> <br>
   <% end %>
 
   <div class='form group' style='margin-top:15px;'>
-    <%= form_for Comment.new, url:post_comments_path(@post.id) do |f|%>
+    <%= form_for Comment.new, remote: true, url:post_comments_path(@post.id) do |f|%>
     <%= f.label "댓글"%>
     <%= f.text_field :content%> <br>
     <%= f.submit '작성'%>
