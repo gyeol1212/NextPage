@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'home/recruit'
 
+  get 'search' => "posts#search", as: 'search'
+
   get 'home/result'
 
   root 'home#index'
