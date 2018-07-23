@@ -16,7 +16,14 @@
   <% @post.comments.each do |comment| %>
     <p class='show'><%= comment.user.name %></p>
     <p class='show'><%= comment.content %></p>
-    <%= link_to '삭제', post_comment_path(@post.id,comment.id), method: 'delete', remote: true %> <br>
+    <%= link_to '삭제', post_comment_path(@post.id,comment.id), class: "al#{comment.id}", method: 'delete', remote: true %> <br>
+    <% if comment.user_id != current_user.id %>    
+      <script>
+        $(".al<%=comment.id%>").click(function(){
+            alert("쓴사람만 지울수있어 인마");
+        })
+      </script>
+    <% end %>
   <% end %>
 
   <div class='form group' style='margin-top:15px;'>
