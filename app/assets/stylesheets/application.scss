@@ -114,9 +114,15 @@
     margin-right: -37%;
 }
 
-.postindex {
-    background-image:url("bgbg.png")
+.postmargin {
+    background-image: url(asset_path("main3.jpg"));
 }
+
+.postindex {
+    background-image: url(asset_path('main3.jpg'));
+}
+
+
 .contentfont {
     font-family: 'Gothic A1', sans-serif;
     font-weight: 700;
