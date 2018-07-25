@@ -9,7 +9,7 @@
   </div>
 
   <div style='margin-top: 30px;'>
-    <div class='content'><p class='show' style="font-size: 20px"><%= @post.content %></p></div>
+    <div class='content'><p class='show' style="font-size: 20px"><%= @post.content.html_safe %></p></div>
   </div>
 
   <div style='margin-top:30px'>
@@ -35,7 +35,7 @@
   </div>
 
   <div class="text-right">
-    <%= link_to 'Edit', edit_post_path(@post), style: 'color: #777777; font-weight: 300; font-size: 15px' %> |
+    <%= link_to_if @post.user_id == current_user.id, 'Edit', edit_post_path(@post), style: 'color: #777777; font-weight: 300; font-size: 15px' %> |
     <%= link_to 'Back', posts_path, style: 'color: #777777; font-weight: 300; font-size: 15px' %>
   </div>
 </div>
