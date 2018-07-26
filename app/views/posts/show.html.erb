@@ -1,26 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class='container postmargin'>
+  <p id="notice"><%= notice %></p>
+  <p class="text-right"><%= link_to('Logout', destroy_user_session_path, method: :delete,style: 'color: #777777; font-weight: 300; font-size: 22px') %></p>
+  <h1 class="text-left">Member's Lounge</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  <div style='margin-top: 70px'>
+    <p class="show" style="width: 170px; padding-right: 30px; font-weight: 800">제목</p>
+    <p class='show'><%= @post.title  %></p>
+  </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+  <div style='margin-top: 30px;'>
+    <div class='content'><p class='show' style="font-size: 20px"><%= @post.content %></p></div>
+  </div>
 
-<% @post.comments.each do |comment| %>
-  <%= comment.content %>
-  <%= comment.user.name%>
-  <%= link_to '삭제', post_comment_path(@post.id,comment.id), method: 'delete'%> <br>
-<% end %>
+  <div style='margin-top:30px'>
+  <% @post.comments.each do |comment| %>
+    <p class='show'><%= comment.user.name %></p>
+    <p class='show'><%= comment.content %></p>
+    <%= link_to '삭제', post_comment_path(@post.id,comment.id), class: "al#{comment.id}", method: 'delete', remote: true %> <br>
+    <% if comment.user_id != current_user.id %>    
+      <script>
+        $(".al<%=comment.id%>").click(function(){
+            alert("쓴사람만 지울수있어 인마");
+        })
+      </script>
+    <% end %>
+  <% end %>
 
-<%= form_for Comment.new, url:post_comments_path(@post.id) do |f|%>
-<%= f.label "댓글"%>
-<%= f.text_field :content%> <br>
-<%= f.submit '작성'%>
-<% end %>
+  <div class='form group' style='margin-top:15px;'>
+    <%= form_for Comment.new, remote: true, url:post_comments_path(@post.id) do |f|%>
+    <%= f.label "댓글"%>
+    <%= f.text_field :content%> <br>
+    <%= f.submit '작성'%>
+    <% end %>
+  </div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <div class="text-right">
+    <%= link_to 'Edit', edit_post_path(@post), style: 'color: #777777; font-weight: 300; font-size: 15px' %> |
+    <%= link_to 'Back', posts_path, style: 'color: #777777; font-weight: 300; font-size: 15px' %>
+  </div>
+</div>

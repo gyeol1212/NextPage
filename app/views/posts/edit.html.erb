@@ -1,6 +1,10 @@
-<h1>Editing Post</h1>
+<div class='container postmargin'>
+    <h1 class='text-left'>Editing Post</h1>
 
-<%= render 'form', post: @post %>
+    <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+    <div class="text-right">
+    <%= link_to 'Show', @post, style: 'color: #777777; font-weight: 300; font-size: 15px' %>
+    <%= link_to 'Back', posts_path, style: 'color: #777777; font-weight: 300; font-size: 15px' %></button>
+    </div>
+</div>
