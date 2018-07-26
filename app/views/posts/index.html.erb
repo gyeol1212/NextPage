@@ -1,5 +1,6 @@
 <div class="container text-center postmargin">
   <p id="notice"><%= notice %></p>
+  <p class="text-right"><%= link_to('Admin', rails_admin_path, style: 'color: #777777; font-weight: 300; font-size: 22px') %></p>
   <p class="text-right"><%= link_to('Logout', destroy_user_session_path, method: :delete,style: 'color: #777777; font-weight: 300; font-size: 22px') %></p>
 
   <h1 class="text-left">Member's Lounge</h1>

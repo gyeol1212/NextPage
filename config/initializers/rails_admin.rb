@@ -3,10 +3,18 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
+
+  config.authorize_with do |controller|
+    if current_user.nil?
+      redirect_to main_app.new_account_session_path, flash: {alert: '로그인 먼저 해주세요.'}
+    elsif !current_user.admin?
+      redirect_to main_app.posts_path, flash: {alert: '관리자 권한이 필요합니다.'}
+    end
+  end
 
   ## == Cancan ==
   # config.authorize_with :cancan
