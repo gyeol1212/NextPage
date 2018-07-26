@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'comments/destroy'
 
+  post '/tinymce_assets' => 'tinymce_assets#create'
+
   devise_for :users
   resources :posts do
     resources :comments, only: [:create, :destroy]
