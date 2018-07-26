@@ -71,7 +71,6 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    dotenv (2.2.2)
     erubis (2.7.0)
     excon (0.62.0)
     execjs (2.7.0)
@@ -445,7 +444,6 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise (~> 4.2)
-  dotenv (~> 2.2.1)
   figaro
   fog (~> 1.41.0)
   jbuilder (~> 2.5)
