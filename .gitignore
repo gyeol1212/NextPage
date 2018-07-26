@@ -19,3 +19,6 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# application.yml은 git ignore 합니당 
+/config/application.yml

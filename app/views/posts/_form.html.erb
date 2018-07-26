@@ -16,10 +16,13 @@
     <%= f.text_field :title, class: 'form-control show', style:'margin-top: 10px' %>
   </div>
 
-  <div class='form group' style='margin-top:15px;'>
-    <%= f.label :내용, class:'show' %>
-    <%= f.text_area :content, class: 'form-control show', style:'margin-top: 10px' %>
-  </div>
+  
+
+  <div class="field">
+    <%= f.label :내용 %>
+    <%= tinymce :language => "en" %>
+    <%= f.text_area :content, id: :post_content, class: "form-control tinymce", rows: "10" %>
+</div>
 
 
   <div class='form group' style='margin-top:15px;'>
