@@ -117,4 +117,6 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
       redirect_to :back if @post.user.id != current_user.id
     end
+
+      
 end
