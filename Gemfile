@@ -5,6 +5,20 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Text-Editor
+gem 'tinymce-rails'
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
+
+# Image-Upload
+gem 'fog', '~> 1.41.0'
+gem 'carrierwave'
+
+# Security
+gem 'figaro'
+
+# Administrator Page
+gem 'rails_admin'
+
 gem 'rails_db', '~> 1.6'
 gem 'bootstrap', '~> 4.1.1'
 gem 'kaminari'
