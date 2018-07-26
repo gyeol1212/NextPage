@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   post '/tinymce_assets' => 'tinymce_assets#create'
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth' }
   resources :posts do
     resources :comments, only: [:create, :destroy]
   end
