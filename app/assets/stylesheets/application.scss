@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,800');
 
+.body {
+    position: relative;
+    height: 100%;
+}
+
 .faqbox {
     margin-left: 350px;
     margin-right: 100px;
@@ -51,6 +56,7 @@
     margin-top: 30px;
 }
 
+
 .centered1 {
     position: absolute;
     top: 40%;
@@ -78,9 +84,7 @@
 
 .imgsize {
     width: auto; height: auto;
-    max-width: 73px;
-    max-height: 69px;
-    }
+}
 
 .imgsize2 {
     
@@ -123,12 +127,24 @@
     background-image: asset-data-url("bgbg.png")
 }
 
+.cont {
+    text-align: center;
+}
 
 .contentfont {
     font-family: 'Gothic A1', sans-serif;
     font-weight: 700;
     font-size: 100px;
     color: white;
+    padding-bottom: -2px;
+    letter-spacing: 0px;
+}
+
+.contentfont2 {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: grey;
     padding-bottom: -2px;
     letter-spacing: 0px;
 }
@@ -150,16 +166,17 @@
 html, body {
     position: relative;
     height: 100% !important;
+    width: 100% !important;
     // overflow: hidden;
 }
 body {
     background-image: asset-data-url("bgbg.png");
-
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color:#fff;
     margin: 0;
     padding: 0;
+    overflow: scroll;
 
 }
 .searchstyle {
@@ -281,7 +298,6 @@ background-color:rgba(200, 219, 130, 0.5);
     background-color: rgba(225,225,225,0);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 78px;
-    padding-bottom: 78px;
 }
 
 .sidebar:hover {

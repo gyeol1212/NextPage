@@ -11,6 +11,12 @@
 
     <%= f.submit "로그인", class:'box', style: 'color: white; background-color: #75000F' %>
   <% end %>
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <div class="box"><%= link_to "구글로 로그인", omniauth_authorize_path(resource_name, provider), style: "color: black; text-decoration:none"%></div>
+    <% end -%>
+  <% end -%>
+
   <%= link_to "회원가입", new_registration_path(resource_name), style: 'color: black' %>
 
 </div>
